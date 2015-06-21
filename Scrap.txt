@@ -1,0 +1,39 @@
+JFrame frame = new JFrame();
+      JPanel panel = new JPanel();
+      JPanel panel2 = new JPanel();
+      JLayeredPane layer = new JLayeredPane();
+      
+      panel.setLayout(new BorderLayout());
+      panel2.setLayout(new BorderLayout());
+     // frame.setLayout(new BorderLayout()); // changes layout to allow multiple components
+      frame.add(layer, BorderLayout.CENTER);
+      final int FRAME_WIDTH = 640;
+      final int FRAME_HEIGHT = 516;	
+      frame.setTitle("Shade Game");
+      
+      layer.setBounds(0,0,640,516);
+      SampleLevelComponent level = new SampleLevelComponent();
+      RobotComponent robotcomponent = new RobotComponent();
+      panel.add(level,BorderLayout.CENTER);
+      panel2.add(robotcomponent,BorderLayout.CENTER);
+      panel.setPreferredSize(new Dimension(640, 516));
+      panel2.setPreferredSize(new Dimension(640, 516));
+      
+      
+      layer.add(panel, new Integer(0));
+  //    layer.add(panel2, new Integer(1),0);
+      frame.add(layer);
+      
+      
+      
+  //    frame.add(panel2, BorderLayout.WEST);
+      //frame.getContentPane().add(panel);
+      //frame.setContentPane(new SampleLevelComponent());
+      //frame.getContentPane().add(new SampleLevel());
+      
+	  frame.pack();
+      frame.setSize(FRAME_WIDTH, FRAME_HEIGHT); 	
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frame.setVisible(true);
+      
+      //frame.repaint();

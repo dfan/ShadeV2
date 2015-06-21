@@ -1,0 +1,30 @@
+		else if(x==0 && y>0){
+			time=1.0;
+
+			while(time<8.1){
+				
+				david.jump(time);	
+				time+=1.0;
+				david.draw(g2);
+				System.out.println("redrawn");	
+			}
+			
+			while(time<=16.0){
+				
+				david.jump(time);
+				time+=1.0;
+				david.draw(g2);
+				System.out.println("redrawn");	
+			}
+
+
+//	time=1.0;
+			/*
+			david.jump((double)y);
+			david.draw(g2);
+			try { Thread.sleep(1500); }
+        			catch ( Exception e ) { }
+        	david.jump(8);
+			david.draw(g2);
+			
+			*/
